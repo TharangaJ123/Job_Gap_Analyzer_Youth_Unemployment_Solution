@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Zap, Github, Linkedin, Mail, Menu, X } from "lucide-react";
+import { Zap, Github, Linkedin, Mail, Menu, X,Brain } from "lucide-react";
 
 export default function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -21,13 +21,12 @@ export default function Navbar() {
             transition={{ duration: 0.2 }}
           >
             <motion.div
-              className="w-8 h-8 bg-gradient-to-r from-green-400 to-emerald-500 rounded-lg flex items-center justify-center"
+              className="w-8 h-8  flex items-center justify-center"
               whileHover={{ rotate: 360 }}
               transition={{ duration: 0.8 }}
             >
-              <Zap className="w-5 h-5 text-white" />
+              <img src="/brain.png" />
             </motion.div>
-            <span className="text-xl font-bold text-white">GapAnalyzer !</span>
           </motion.div>
 
           {/* Desktop Navigation */}
