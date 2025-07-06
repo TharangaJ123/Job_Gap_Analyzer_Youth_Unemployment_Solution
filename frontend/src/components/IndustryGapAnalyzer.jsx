@@ -4,6 +4,8 @@ import { Upload, FileText, Briefcase, CheckCircle2, XCircle, Lightbulb, Loader2,
 import Navbar from "./Navbar";
 import Footer from "./Footer";
 
+const API_URI = import.meta.env.VITE_RECAT_API_URI;
+
 export default function JobAnalyzer() {
   const [cvFile, setCvFile] = useState(null);
   const [jobDescription, setJobDescription] = useState("");
@@ -156,7 +158,7 @@ export default function JobAnalyzer() {
         await new Promise(resolve => setTimeout(resolve, 600));
       }
 
-      const res = await fetch("http://localhost:5000/analyze", {
+      const res = await fetch(`${API_URI}/analyze`, {
         method: "POST",
         body: formData,
       });
